@@ -48,6 +48,7 @@ function App() {
 						innerClass={{
 							'suggestion-item': 'test-suggestion',
 							'active-suggestion-item': 'active-test-suggestion',
+              'section-header': 'section-header',
 						}}
 					/>
 				</div>
