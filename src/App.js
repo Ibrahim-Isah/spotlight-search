@@ -8,6 +8,14 @@ import {
 import './App.css';
 
 function App() {
+	var themeURL = window.location.pathname;
+
+	var theme = 'light';
+	if (themeURL === '/') {
+		theme = 'light';
+	} else {
+		theme = themeURL.substring(1);
+	}
 	return (
 		<ReactiveBase
 			app='good-books-ds'
@@ -17,7 +25,7 @@ function App() {
 				recordAnalytics: true,
 				userId: 'jon',
 			}}
-			themePreset='light'
+			themePreset={theme}
 		>
 			<div className='row'>
 				<div className='col'>
