@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import { ReactiveBase } from '@appbaseio/reactivesearch';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ReactiveBase
+			app='good-books-ds'
+			url='https://b7GLrKxsd:095e2eab-3800-491b-abf6-6b15cf8edf87@appbase-demo-ansible-abxiydt-arc.searchbase.io'
+			enableAppbase
+			appbaseConfig={{
+				recordAnalytics: true,
+				userId: 'jon',
+			}}
+			themePreset='light'
+		></ReactiveBase>
+	);
 }
 
 export default App;
