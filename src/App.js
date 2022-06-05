@@ -1,4 +1,8 @@
-import { ReactiveBase, SearchBox } from '@appbaseio/reactivesearch';
+import {
+	ReactiveBase,
+	SearchBox,
+	SelectedFilters,
+} from '@appbaseio/reactivesearch';
 import './App.css';
 
 function App() {
@@ -44,6 +48,9 @@ function App() {
 							'active-suggestion-item': 'active-test-suggestion',
 						}}
 					/>
+				</div>
+				<div className='col'>
+					<SelectedFilters />
 				</div>
 			</div>
 		</ReactiveBase>
