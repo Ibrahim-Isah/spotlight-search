@@ -1,4 +1,4 @@
-import { ReactiveBase } from '@appbaseio/reactivesearch';
+import { ReactiveBase, SearchBox } from '@appbaseio/reactivesearch';
 import './App.css';
 
 function App() {
@@ -12,7 +12,41 @@ function App() {
 				userId: 'jon',
 			}}
 			themePreset='light'
-		></ReactiveBase>
+		>
+			<div className='row'>
+				<div className='col'>
+					<SearchBox
+						title='SearchBox'
+						defaultValue=''
+						dataField={['original_title', 'original_title.search']}
+						componentId='BookSensor'
+						highlight
+						URLParams
+						enablePopularSuggestions
+						popularSuggestionsConfig={{
+							size: 3,
+							minChars: 2,
+							index: 'good-books-ds',
+						}}
+						enableRecentSuggestions
+						recentSuggestionsConfig={{
+							size: 3,
+							index: 'good-books-ds',
+							minChars: 4,
+						}}
+						size={14}
+						enablePredictiveSuggestions
+						index='good-books-ds'
+						showClear
+						renderNoSuggestion='No suggestions found.'
+						innerClass={{
+							'suggestion-item': 'test-suggestion',
+							'active-suggestion-item': 'active-test-suggestion',
+						}}
+					/>
+				</div>
+			</div>
+		</ReactiveBase>
 	);
 }
 
