@@ -48,7 +48,13 @@ function App() {
 						innerClass={{
 							'suggestion-item': 'test-suggestion',
 							'active-suggestion-item': 'active-test-suggestion',
-              'section-header': 'section-header',
+							'section-header': 'section-header',
+						}}
+						enableFeaturedSuggestions={true}
+						featuredSuggestionsConfig={{
+							featuredSuggestionsGroupId: 'spotlight_search', // # mandatory
+							maxSuggestionsPerSection: 10,
+							sectionsOrder: ['repositories', 'docs', 'functions'],
 						}}
 					/>
 				</div>

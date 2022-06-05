@@ -1,0 +1,135 @@
+{
+	"sectionLabels": {
+		"repositories": {
+			"label": "<h2>Repositories</h2>"
+		},
+		"docs": {
+			"label": "<h2>Documentation</h2>"
+		},
+		"functions": {
+			"label": "<h2>Functions</h2>"
+		}
+	},
+	"suggestions": [
+		{
+			"label": "<h3>@appbaseio/reactivesearch</h3>",
+			"value": "reactivesearch repository",
+			"description": "Github repository for reactivesearch",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://github.com/appbaseio/reactivesearch\", \"target\": \"_blank\" }",
+			"sectionId": "repositories",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 1
+		},
+		{
+			"label": "<h3>@appbaseio/reactivesearch-vue</h3>",
+			"value": "reactivesearch repository for vuejs",
+			"description": "Github repository for reactivesearch-vue",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://github.com/appbaseio/reactivesearch/tree/next/packages/vue\", \"target\": \"_blank\" }",
+			"sectionId": "repositories",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 2
+		},
+		{
+			"label": "<h3>@appbaseio/react-searchbox</h3>",
+			"value": "appbase react-searchbox repository",
+			"description": "Github repository for react-searchbox",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://github.com/appbaseio/searchbox/tree/master/packages/react-searchbox\", \"target\": \"_blank\" }",
+			"sectionId": "repositories",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 3
+		},
+		{
+			"label": "<h3>@appbaseio/vue-searchbox</h3>",
+			"value": "appbase vue-searchbox repository",
+			"description": "Github repository for vue-searchbox",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://github.com/appbaseio/searchbox/tree/master/packages/vue-searchbox\" , \"target\": \"_blank\"}",
+			"sectionId": "repositories",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 4
+		},
+		{
+			"label": "<h3>@appbaseio/reactivesearch</h3>",
+			"value": "reactivesearch repository",
+			"description": "Documentation for reactivesearch",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://docs.appbase.io/docs/reactivesearch/v3/overview/quickstart\", \"target\": \"_blank\" }",
+			"sectionId": "docs",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 1
+		},
+		{
+			"label": "<h3>@appbaseio/reactivesearch-vue</h3>",
+			"value": "documentation for vuejs reactivesearch",
+			"description": "Documentation for reactivesearch-vue",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://docs.appbase.io/docs/reactivesearch/vue/overview/QuickStart\", \"target\": \"_blank\" }",
+			"sectionId": "docs",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 2
+		},
+		{
+			"label": "<h3>@appbaseio/react-searchbox</h3>",
+			"value": "appbase react-searchbox docs",
+			"description": "Documentation for react-searchbox",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://docs.appbase.io/docs/reactivesearch/react-searchbox/quickstart\", \"target\": \"_blank\" }",
+			"sectionId": "docs",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 3
+		},
+		{
+			"label": "<h3>@appbaseio/vue-searchbox</h3>",
+			"value": "appbase vue-searchbox docs",
+			"description": "Documentation for vue-searchbox",
+			"action": "navigate",
+			"subAction": "{\"link\": \"https://docs.appbase.io/docs/reactivesearch/vue-searchbox/quickstart\" , \"target\": \"_blank\"}",
+			"sectionId": "docs",
+			"iconURL": "https://camo.githubusercontent.com/95874e325a752e6ffb604991feb719c6e8bae6a552ed23d4a566bc4d518bc090/68747470733a2f2f692e696d6775722e636f6d2f696952397741732e706e67",
+			"order": 4
+		},
+		{
+			"label": "<h3>Alert</h3>",
+			"value": "alert",
+			"description": "Invokes an alert message",
+			"action": "function",
+			"subAction": "function() { alert('Hello World! with theme');}",
+			"sectionId": "functions",
+			"iconURL": "https://www.svgrepo.com/show/281847/bell.svg",
+			"order": 1
+		},
+		{
+			"label": "<h3>Light</h3>",
+			"value": "light mode",
+			"description": "Change theme to light mode",
+			"action": "function",
+			"subAction": "function(){ window.history.pushState({ theme: 'white'}, '', '/light');window.location.reload();}",
+			"sectionId": "functions",
+			"iconURL": "https://www.svgrepo.com/show/20546/sun.svg",
+			"order": 2
+		},
+		{
+			"label": "<h3>Dark</h3>",
+			"value": "dark mode",
+			"description": "Change theme to dark mode",
+			"action": "function",
+			"subAction": " function(){ window.history.pushState({ theme: 'dark'}, '', '/dark');window.location.reload();}",
+			"sectionId": "functions",
+			"iconURL": "https://www.svgrepo.com/show/8265/moon.svg",
+			"order": 3
+		},
+		{
+			"label": "<h3>Search on Google</h3>",
+			"value": "google search",
+			"description": "Search keyword on google",
+			"action": "function",
+			"subAction": "function() {window.open('https://www.google.com');}",
+			"sectionId": "functions",
+			"iconURL": "https://www.svgrepo.com/show/122724/google.svg",
+			"order": 4
+		}
+	]
+}
