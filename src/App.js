@@ -1,10 +1,4 @@
-import {
-	ReactiveBase,
-	SearchBox,
-	ReactiveList,
-	ResultCard,
-	SelectedFilters,
-} from '@appbaseio/reactivesearch';
+import { ReactiveBase, SearchBox } from '@appbaseio/reactivesearch';
 import './App.css';
 
 function App() {
@@ -19,7 +13,7 @@ function App() {
 	return (
 		<ReactiveBase
 			app='good-books-ds'
-			url='https://b7GLrKxsd:095e2eab-3800-491b-abf6-6b15cf8edf87@appbase-demo-ansible-abxiydt-arc.searchbase.io'
+			url='https://6a0ae3a3a8d4:6a3f508d-169b-4ed7-9680-20658120930f@appbase-demo-ansible-abxiydt-arc.searchbase.io'
 			enableAppbase
 			appbaseConfig={{
 				recordAnalytics: true,
@@ -27,107 +21,42 @@ function App() {
 			}}
 			themePreset={theme}
 		>
-			<div className='row'>
-				<div className='col'>
-					<SearchBox
-						title='SearchBox'
-						defaultValue=''
-						dataField={['original_title', 'original_title.search']}
-						componentId='BookSensor'
-						highlight
-						URLParams
-						enablePopularSuggestions
-						popularSuggestionsConfig={{
-							size: 3,
-							minChars: 2,
-							index: 'good-books-ds',
-						}}
-						enableRecentSuggestions
-						recentSuggestionsConfig={{
-							size: 3,
-							index: 'good-books-ds',
-							minChars: 4,
-						}}
-						size={14}
-						enablePredictiveSuggestions
-						index='good-books-ds'
-						showClear
-						renderNoSuggestion='No suggestions found.'
-						innerClass={{
-							'suggestion-item': 'test-suggestion',
-							'active-suggestion-item': 'active-test-suggestion',
-							'section-header': 'section-header',
-						}}
-						enableFeaturedSuggestions={true}
-						featuredSuggestionsConfig={{
-							featuredSuggestionsGroupId: 'spotlight_search', // # mandatory
-							maxSuggestionsPerSection: 10,
-							sectionsOrder: ['repositories', 'docs', 'functions'],
-						}}
-					/>
-				</div>
-				<div className='col'>
-					<SelectedFilters />
-					<ReactiveList
-						componentId='SearchResult'
-						dataField='original_title'
-						size={10}
-						className='result-list-container'
-						pagination
-						react={{
-							and: 'BookSensor',
-						}}
-						render={({ data }) => (
-							<ReactiveList.ResultCardsWrapper>
-								{data.map((item) => (
-									<ResultCard id={item._id} key={item._id}>
-										<ResultCard.Image src={item.image} />
-										<ResultCard.Title>
-											<div
-												className='book-title'
-												dangerouslySetInnerHTML={{
-													__html: item.original_title,
-												}}
-											/>
-										</ResultCard.Title>
-
-										<ResultCard.Description>
-											<div className='flex column justify-space-between'>
-												<div>
-													<div>
-														by{' '}
-														<span className='authors-list'>{item.authors}</span>
-													</div>
-													<div className='ratings-list flex align-center'>
-														<span className='stars'>
-															{
-																/* eslint-disable */
-																Array(item.average_rating_rounded)
-																	.fill('x')
-																	.map((_, index) => (
-																		<i className='fas fa-star' key={index} />
-																	))
-																/* eslint-enable */
-															}
-														</span>
-														<span className='avg-rating'>
-															({item.average_rating} avg)
-														</span>
-													</div>
-												</div>
-												<span className='pub-year'>
-													Pub {item.original_publication_year}
-												</span>
-											</div>
-										</ResultCard.Description>
-									</ResultCard>
-								))}
-							</ReactiveList.ResultCardsWrapper>
-						)}
-					/>
-					;
-				</div>
-			</div>
+			<SearchBox
+				title='SearchBox'
+				defaultValue=''
+				dataField={['original_title', 'original_title.search']}
+				componentId='BookSensor'
+				highlight
+				URLParams
+				enablePopularSuggestions
+				popularSuggestionsConfig={{
+					size: 3,
+					minChars: 2,
+					index: 'good-books-ds',
+				}}
+				enableRecentSuggestions
+				recentSuggestionsConfig={{
+					size: 3,
+					index: 'good-books-ds',
+					minChars: 4,
+				}}
+				size={14}
+				enablePredictiveSuggestions
+				index='good-books-ds'
+				showClear
+				renderNoSuggestion='No suggestions found.'
+				innerClass={{
+					'suggestion-item': 'test-suggestion',
+					'active-suggestion-item': 'active-test-suggestion',
+					'section-header': 'section-header',
+				}}
+				enableFeaturedSuggestions={true}
+				featuredSuggestionsConfig={{
+					featuredSuggestionsGroupId: 'spotlight', // # mandatory
+					maxSuggestionsPerSection: 10,
+					sectionsOrder: ['repositories', 'docs', 'functions'],
+				}}
+			/>
 		</ReactiveBase>
 	);
 }
