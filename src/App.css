@@ -2,6 +2,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 15px;
+  padding-inline:15px;
 }
 
 .test-suggestion img {
